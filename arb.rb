@@ -24,6 +24,9 @@ class Arbitrageur
       inter_trades = inter_trades(c)
       arb_value(first_trades, inter_trades, last_trades)
       puts @opportunities
+      File.open('opportunities.txt', "w+") do |f|
+        @opportunities.each {|o| f.puts(o)}
+      end
     end
   end
 
