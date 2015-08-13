@@ -1,6 +1,5 @@
 require "hurley"
 require "json"
-require 'benchmark'
 
 class Arbitrageur
   def initialize
