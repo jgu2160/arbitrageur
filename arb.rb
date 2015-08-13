@@ -35,7 +35,7 @@ class Arbitrageur
   end
 
   def arb_value(first_trades, inter_trades, last_trades)
-    inter_trades.map do |t|
+    inter_trades.each do |t|
       former = Regexp.new(t[0..2])
       latter = Regexp.new(t[4..6])
       first = first_trades.select { |ft| ft[former] }[0]
